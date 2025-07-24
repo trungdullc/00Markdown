@@ -1,3 +1,5 @@
+## ⚠️ Important: (depreciated) GitHub removed font color & css styling ⚠️
+
 # Header 1
 
 <h2> Header 2: Note: <font color = "red">html tags</font> <font color = "green">also work</font> in Markdown</h2>
@@ -11,7 +13,7 @@ Note: Under is Horizontal Line
 Note: Under is Horizontal Line
 <hr>
 
-<p>Html style paragraph.  This text is <strong>strong</strong> and <b>bold</b> while this text is <i>italic</i> this is <em>emphasized</em> and <del>strikethrough</del> and <mark>highlighted</mark> and <span style="background-color: green;">custom highlighted</span>.  Here is a Link to <a href="https://www.google.com" target="_blank" alt="Google Link">Google</a></p>
+<p>Html style paragraph.  This text is <strong>strong</strong> and <b>bold</b> while this text is <i>italic</i> this is <em>emphasized</em> and <del>strikethrough</del> and <mark>highlighted</mark>.  Here is a Link to <a href="https://www.google.com" target="_blank" alt="Google Link">Google</a></p>
 
 <center><img src ="https://www.google.com/images/logo.gif" alt="Google Image Here" title="Google Image"></center>
 
@@ -111,44 +113,57 @@ Ordered List Markdown
 |1|Fruits|
 |2|Vegetables|
 
-HTML TaskList are inline
-<form>
-<input type="checkbox" id="trash" name="trash">
-<label for="trash">Throw out Trash</label><br>
-<input type="checkbox" id="dish" name="dish" checked>
-<label for="dish">Clean Dishes</label>
-</form>
+- [ ] Task
+- [ ] dam
 
-## <font color = "yellow">Pre-Installation</font>
+HTML TaskList are inline
+- [x] Throw out Trash (Not seen on GitHub codespace)
+- [ ] Clean Dishes
+
+## Pre-Installation
 
 ### Check current Git username and email
+```
 git config user.name
 git config user.email
+```
 
 ### Set globally (for all repos)(preferred)
+```
 git config --global user.name "Your Name"
 git config --global user.email "your@email.com"
+```
 
 ### Optional: Set for just this repo
+```
 git config user.name "Project Name"
 git config user.email "project@email.com"
+```
 
 ### Check if You Already Have SSH Keys
+```
 ls -la ~/.ssh
+```
 
 | <font color = "red">(private key)</font> | <font color = "red">id_rsa</font>  | <font color = "red">id_ed25519</font>  |
 | --- | --- | --- |
 | <font color = "green">(public key)</font> | <font color = "green">id_rsa.pub</font> | <font color = "green">id_ed25519.pub</font> |
 
 ### Pick: Generate SSH Key w/ ed25519 algorithm (more secure than RSA)
+```
 ssh-keygen -t ed25519 -C "your@email.com"
+```
 
 ### Pick: Generate SSH Key w/ RSA algorithm
+```
 ssh-keygen -t rsa -b 4096 -C "your@email.com"
+```
 
 ### Add SSH Key to GitHub/GitLab
+```
 cat ~/.ssh/id_ed25519.pub
 cat ~/.ssh/id_rsa.pub
+```
 
 ## <font color = "yellow">Installation</font>
 
